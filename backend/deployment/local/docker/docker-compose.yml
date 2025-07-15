@@ -1,0 +1,28 @@
+name: "my-black"
+
+services:
+  my_black:
+    build: ./mssql
+    container_name: my_black
+    ports:
+      - "4000:1433"
+    environment:
+      TZ: UTC
+      MSSQL_SA_PASSWORD: Admin@123
+      ACCEPT_EULA: Y
+    volumes:
+      - ./mssql/scripts:/docker-entrypoint-initdb.d
+    command: >
+      bash -c "
+        /opt/mssql/bin/sqlservr &
+        sleep 15s
+        /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Admin@123 -d master -i /docker-entrypoint-initdb.d/init.sql
+        tail -f /dev/null
+      "
+
+  # my_black-redis:
+  #   image: redis:alpine
+  #   container_name: my_black-redis
+  #   ports:
+  #     - "4002:6379"
+  #   command: redis-server --appendonly yes --requirepass Admin123

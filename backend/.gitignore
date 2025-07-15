@@ -4,5 +4,3 @@ dist
 
 *.local
 *.prod
-
-deployment
