@@ -1,0 +1,15 @@
+export const apiEndpoints = {
+  LIST_SITES: "/site/list",
+  LIST_BLACK_LISTED_TYPES: "/black-listed-type/list",
+  GET_BLACK_LISTED_USER_DETAILS: "/black-listed-user/details",
+  LIST_BLACK_LISTED_USER: "/black-listed-user/list",
+  CREATE_BLACK_LISTED_USER: "/black-listed-user/create",
+  CREATE_ALLOWED_IP: "/allowed-ip/create",
+  CREATE_SITE: "/site/create",
+  DELETE_BLACK_LISTED_USER: "/black-listed-user/delete",
+  CREATE_BLACK_LISTED_USER_FROM_EXCEL: "/black-listed-user/create-from-excel",
+  GET_STATISTICS_OVERVIEW: "/statistics/overview",
+  VALIDATE_MASTER_PASSWORD: "/auth/validate-master-password",
+  VALIDATE_SETTINGS_MASTER_CODE: "/auth/validate-settings-master-code",
+  LIST_ALLOWED_IP: "/allowed-ip/list",
+};

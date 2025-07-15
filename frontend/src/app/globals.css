@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+:root {
+  --font-base: "Pretendard", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: var(--font-base);
+}
+
+html {
+  font-size: 1rem;
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+/* file global.css hoặc styles.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
